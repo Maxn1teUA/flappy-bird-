@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flappy Bird</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="gameContainer">
+        <canvas id="gameCanvas"></canvas>
+        <div id="introScreen">
+            <h1>Flappy Bird</h1>
+            <p>Натисніть SPACE, щоб почати</p>
+            <p id="highScoreText">Максимальний рекорд: 0</p>
+        </div>
+        <div id="gameOverScreen" style="display:none;">
+            <h1>ГРУ ЗАКІНЧЕНО!</h1>
+            <p id="currentScoreText">Ваш рахунок: 0</p>
+            <p id="finalHighScoreText">Максимальний рекорд: 0</p>
+            <p>Натисніть R для перезапуску</p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
