@@ -111,8 +111,11 @@ function update() {
         bird.y = 0;
         bird.velocity = 0;
     }
-    // <<< КЛЮЧОВА ЗМІНА: Рядок, що викликав Game Over при падінні вниз, ВИДАЛЕНО/ЗАКОМЕНТОВАНО
-    // if (bird.y + bird.height > canvas.height) { endGame(); return; }
+    // <<< НОВА ЗМІНА: Перевірка зіткнення з НИЖНІМ краєм канвасу (зупиняємо пташку на краю)
+    if (bird.y + bird.height > canvas.height) {
+        bird.y = canvas.height - bird.height;
+        bird.velocity = 0;
+    }
 
     if (frame % pipeInterval === 0) {
         const minOffset = 70;
